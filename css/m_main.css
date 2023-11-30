@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* 메인콘텐츠 서식 */
+
+main{padding-top: 40px;}
+
+/* 메인 슬라이드 */
+.slide > h2{
+  display: none;
+}
+.slide img{
+  transform: translate(-120px, -203px);
+}
+.myslide{
+  height: 66vh;
+}
+.slide .swiper-slide{
+  position: relative;
+}
+.slide .swiper-slide h2{
+  position: absolute;
+  top: 50%;left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  padding: 6px 10px;
+  border-radius: 40px;
+  background: rgba(0,0,0,.7);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* 페이지네이션 */
+.myslide .swiper-pagination-bullet {
+  width: 15px;height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.78;
+  transition: 0.5s;
+  margin: 0 7px !important;
+}
+.myslide .swiper-pagination-bullet-active {
+  width: 40px !important;
+  border-radius: 10px !important;
+  background: #e13e38 !important;
+  opacity: 1 !important;
+}
+
+/* 메인 내비게이션 */
+.m_gnb{
+  width: 90%;
+  margin: 20px auto;
+}
+.m_gnb > ul{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-area: 0;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+.m_gnb > ul > li{
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.m_gnb > ul > li:last-child{
+  overflow: hidden;
+  grid-area: 4/1/3/4; 
+  height: 50px;
+  vertical-align: middle;
+}
+.m_gnb li:last-child .m_txt{
+  display: inline-block;
+  transform: translateY(10px);
+}
+.m_gnb .icon{
+  display: inline-block;
+  width: 83px;height: 66px;
+  background-image: url(../m_images/nav_icon.png);
+  background-size: 360px;
+}
+.m_txt{
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 30px;
+}
+.m_gnb li:first-child .icon{
+  background-position: 0 0;
+}
+.m_gnb li:nth-child(2) .icon{
+  background-position: -82px 0;
+}
+.m_gnb li:nth-child(3) .icon{
+  background-position: -166px 0;
+}
+.m_gnb li:nth-child(4) .icon{
+  width: 90px;
+  background-position: -252px 0;
+  scale: 0.9;
+}
+.m_gnb li:nth-child(5) .icon{
+  background-position: 11px -65px;
+}
+.m_gnb li:nth-child(6) .icon{
+  background-position: -70px -64px;
+}
+.m_gnb li:last-child .icon{
+  width: 40px;
+  background-position: -160px -66px;
+}
+
+/* 지점 정보 */
+.info{
+  width: 90%;height: 70px;
+  margin: 20px auto;
+  background-image: url(../m_images/info_back.png);
+  background-size: 100%;
+  color: #fff;
+}
+.info > h2{
+  float: left;
+  padding: 7% 5% 0 5%;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.info > h2 i.fas{
+  display: inline-block;
+  padding-right: 2px;
+  transform: rotate(24deg) translateY(1px);
+}
+.tel{
+  padding-top: 3%;
+  line-height: 27px;
+}
+.tel a{
+  color: #fff;
+  font-size: 16px;
+}
+.info p:last-of-type{
+  text-indent: -14px;
+  text-align: center;
+}

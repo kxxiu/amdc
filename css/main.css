@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+main{clear:both;}
+
+.slide>h2, #g_wrap>h2,
+#info>h2, #tel>h2, #service>h2{
+  display: none;
+}
+
+/* 메인 배너 */
+.slide{
+  position:relative;
+  width:100%;
+}
+.slide img{
+  display: block;
+  width:100%;
+}
+/* 컨트롤 버튼 */
+.swiper-pagination-bullet{
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 6px !important;
+  background: #fff !important;
+  opacity: 0.8 !important;
+}
+.swiper-pagination-bullet-active{
+  background: #827fe5 !important;
+}
+
+/* 본문 컨텐츠 영역 */
+#g_wrap{
+  display:grid;
+  width:1020px;height: 100%;
+  margin:0px auto;
+  box-sizing:border-box;
+  grid-template-columns: repeat(3, 340px);
+  grid-template-areas:
+  "info info info"
+  "news care tel"
+  "service disease tel";
+}
+section > article:not(section > #info){
+  border-left: 0.1px solid #e3e3e3;
+  border-bottom: 0.1px solid #e3e3e3;
+}
+#news{grid-area:news;}
+#care{grid-area:care;}
+#info{grid-area:info;}
+#tel{grid-area:tel;border-right: 0.1px solid #e3e3e3;}
+#service{grid-area:service;}
+#service{grid-area:disease;}
+
+/* 인포 */
+#info{
+  width: 100%;
+}
+#info ul{
+  display: flex;
+  border-left: 0.1px solid #e3e3e3;
+  border-right: 0.1px solid #e3e3e3;
+  box-sizing: border-box;
+}
+#info ul li{
+  width: 340px;height: 230px;
+}
+#info ul li:nth-child(2){
+  border: 0.1px solid #e3e3e3;
+  border-top: none;
+}
+#info ul li img{
+  width: 100%;height: 100%;
+  object-fit: cover;
+}
+
+/* 뉴스, 진료케이스, 질병 공통 */
+article > h2{
+  padding:7px 0px;
+  border-bottom:1px solid #3834ad;
+  color:#525d9f;
+  font-size:16px;
+  font-weight:500;
+}
+#news, #care, #disease{
+  position: relative;
+  padding: 25px;
+}
+#news > ul, #care > ul, #disease > ul{
+  padding-top: 10px;
+}
+.more_btn img{
+  position: absolute;
+  top: 32px;right: 30px;
+  width: 16px;
+}
+
+/* 뉴스 */
+#news > ul > li{
+text-indent: 2px;
+}
+#news > ul > li > a{
+  font-size: 14px;
+  line-height: 30px;
+  transition: 0.3s;
+}
+#news > ul > li > a:hover{
+  text-decoration:underline;
+}
+
+/* 진료케이스 */
+.careSlide{
+  overflow: hidden;
+  width: 242px;
+  margin: 20px auto;
+}
+.careSlide ul li a{
+  display: flex;
+}
+.careSlide ul li a img{
+  width: 110px;height: 135px;
+  object-fit: cover;
+}
+.careSlide .txt{
+  width: 138px;
+  padding: 0 8px;
+}
+.careSlide .txt h3{
+  font-size: 16px;
+  line-height: 22px;
+}
+.careSlide .txt p{
+  margin: 10px 0 8px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* 좌우,버튼 */
+.careSlide .swiper-button-prev:after,
+.careSlide .swiper-button-next:after{
+  font-size: 26px !important;
+}
+.careSlide .swiper-button-prev:after{
+  transform: translate(8px, 10px);
+}
+.careSlide .swiper-button-next:after{
+  transform: translate(-8px, 10px);
+}
+
+/* 질병 */
+#disease ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+#disease ul li{
+  width: 96px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: normal;
+}
+#disease ul li a{transition: 0.2s;}
+#disease ul li:hover a{
+  color: #3834ad;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* 서비스 */
+#service .lnb{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+#service .lnb li a{transition: 0.3s;}
+#service .lnb li a:hover{
+  filter: brightness(0.9);
+}
+
+/* 진료안내 */
+#tel img{display: block;}
+#tel img:last-child{margin: 20px auto;}

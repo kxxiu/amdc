@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* 헤더 영역 */
+header, footer{
+  width: 100%;
+}
+header{
+  position: relative;z-index: 100;
+  width: 100%;
+}
+
+/* 2단 내비게이션 배경 적용 */
+header:after{
+  content: '';
+  position: absolute;
+  top: 100%;right: 0;left: 0;
+  height: 0px;
+  background: #fff;
+  z-index: 1;
+  transition: height 0.4s ease-in-out;
+}
+header.active:after{
+  height: 200px;
+}
+
+.h_top{
+  height: 30px;
+  background: #4E4D5F;
+}
+.h_inner, .f_inner{
+  width: 1020px;
+  margin: 0px auto;
+}
+.h_inner{
+  display: flex;
+  justify-content: right;
+}
+.h_inner .lnb > ul{
+  display: flex;
+  justify-content: space-evenly;
+  width: 330px;
+  background: #525d9f;
+  color: #fff;
+}
+.h_inner .lnb > ul > li{
+  line-height: 30px;
+}
+.h_inner .lnb li a{
+  color: #fff;
+}
+
+.h_bottom{
+  width: 1020px;height: 80px;
+  margin: 0px auto;
+}
+.h_bottom > h1{
+  position: absolute;z-index: 11;
+}
+.h_bottom > h1 img{
+  width: 300px;
+  padding-top: 4px;
+}
+.h_bottom > .gnb{
+  position: relative;
+  top: 18px;z-index: 10;
+  width: 100%;
+  transition: 0.5s;
+}
+.h_bottom > .gnb > ul{
+  display:flex;justify-content:end;
+}
+.h_bottom > .gnb > ul > li > a{
+  display: block;
+  padding:0px 20px;
+  margin:0px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 60px;
+}
+.h_bottom > .gnb > ul > li:hover > a{
+  color:#525d9f;
+}
+.sub li a:hover {
+  color:#525d9f;
+}
+.h_bottom > .gnb > ul > li:last-child:hover > a{
+  color:#10a010;
+}
+.h_bottom > .gnb > ul > li:last-child .sub li a:hover{
+  color:#10a010;
+}
+
+/* 서브메뉴 */
+.sub{
+  display: none;
+}
+.sub > li{
+  text-align: center;
+}
+.sub > li > a{
+  display: block;
+  font-size: 14px;
+  line-height: 36px;
+}
+
+/* 푸터 영역 */
+footer{
+  background:#e7e7e7;
+  padding:10px;
+  box-sizing: border-box; 
+}
+.f_inner{
+  height:100px;
+}
+.f_inner > h2{
+  float: right;
+}
+.f_lnb{
+  padding-top: 20px;
+}
+.f_lnb > ul{
+  display: flex;
+}
+.f_lnb > ul > li:first-child a::after{
+  content: '';display: inline-block;
+  width: 1px;height: 11px;
+  background: #333;
+  transform: translate(10px, 1px);
+}
+.f_lnb > ul > li > a{
+  padding-right: 20px;
+}
+address{
+  padding-top: 15px;
+  line-height: 22px;
+  font-style: normal;
+}
