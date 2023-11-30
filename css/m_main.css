@@ -26,7 +26,7 @@ main{padding-top: 40px;}
   border-radius: 40px;
   background: rgba(0,0,0,.7);
   color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
@@ -56,7 +56,6 @@ main{padding-top: 40px;}
 .m_gnb > ul{
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-area: 0;
   grid-gap: 10px;
   margin-bottom: 10px;
 }
@@ -98,7 +97,7 @@ main{padding-top: 40px;}
 .m_gnb li:nth-child(4) .icon{
   width: 90px;
   background-position: -252px 0;
-  scale: 0.9;
+  transform: scale(0.9);
 }
 .m_gnb li:nth-child(5) .icon{
   background-position: 11px -65px;
@@ -113,32 +112,30 @@ main{padding-top: 40px;}
 
 /* 지점 정보 */
 .info{
+  display: flex;gap: 2%;
+  justify-content: center;
+  align-items: center;
   width: 90%;height: 70px;
   margin: 20px auto;
-  background-image: url(../m_images/info_back.png);
-  background-size: 100%;
+  background: url(../m_images/info_back.png) 100%;
   color: #fff;
 }
 .info > h2{
-  float: left;
-  padding: 7% 5% 0 5%;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 .info > h2 i.fas{
-  display: inline-block;
   padding-right: 2px;
   transform: rotate(24deg) translateY(1px);
 }
-.tel{
-  padding-top: 3%;
-  line-height: 27px;
+.info > div{
+  font-size: 0.75rem;
+  text-align: center;
+}
+.info > div p{
+  line-height: 20px;
 }
 .tel a{
   color: #fff;
-  font-size: 16px;
-}
-.info p:last-of-type{
-  text-indent: -14px;
-  text-align: center;
+  font-size: 0.875rem;
 }
